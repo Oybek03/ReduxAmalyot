@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { qush,ayir,nol} from "../redux/redux";
+import { qush, ayir, nol } from "../redux/redux";
 
 const Counter = () => {
   const dispatch = useDispatch();
 
   const data = useSelector((val) => val);
-
-
 
   const increment = () => {
     dispatch(ayir());
@@ -24,6 +22,7 @@ const Counter = () => {
     <div>
       <h1>{data}</h1>
       <button
+        className="btn btn-info"
         onClick={() => {
           increment();
         }}
@@ -31,6 +30,7 @@ const Counter = () => {
         inc-
       </button>
       <button
+        className="btn btn-primary"
         onClick={() => {
           reset();
         }}
@@ -38,6 +38,7 @@ const Counter = () => {
         res 0
       </button>
       <button
+        className="btn btn-danger"
         onClick={() => {
           decrement();
         }}

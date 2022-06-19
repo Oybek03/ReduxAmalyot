@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { inc, dec, res } from "../redux/redux";
+import { qush,ayir,nol} from "../redux/redux";
 
 const Counter = () => {
   const dispatch = useDispatch();
@@ -11,13 +11,13 @@ const Counter = () => {
 
 
   const increment = () => {
-    dispatch(inc());
+    dispatch(ayir());
   };
   const decrement = () => {
-    dispatch(dec());
+    dispatch(qush());
   };
   const reset = () => {
-    dispatch(res());
+    dispatch(nol());
   };
 
   return (

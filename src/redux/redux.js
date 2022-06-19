@@ -36,18 +36,18 @@ import { combineReducers, createStore } from "redux";
 //   initialState,
 //   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 // );
-const qush = () => {
+export const qush = () => {
   return {
     type: "QUSH",
   };
 };
-const nol = () => {
+export const nol = () => {
   return {
     type: "NOL",
   };
 };
 
-const ayir = () => {
+export const ayir = () => {
   return {
     type: "AYIR",
   };
@@ -64,3 +64,9 @@ const reducers = (state = initialState, action) => {
       return (state = 0);
   }
 };
+
+export const store = createStore(
+  reducers,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);

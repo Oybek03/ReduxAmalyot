@@ -52,16 +52,16 @@ export const ayir = () => {
     type: "AYIR",
   };
 };
-const initialState = 0;
+const initialState = { count: 0 };
 
 const reducers = (state = initialState, action) => {
   switch (action.type) {
     case "QUSH":
-      return state + 1;
+      return state.count + 1;
     case "AYIR":
-      return state - 1;
+      return state.count - 1;
     case "NOL":
-      return (state = 0);
+      return (state.count = 0);
   }
 };
 

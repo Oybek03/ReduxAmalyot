@@ -6,10 +6,10 @@ const Header = () => {
     <div>
       <ul>
         <li>
-          <Link to="about">About</Link>
+          <a href="about">About</a>
         </li>
         <li>
-          <Link to="contact">Contact</Link>
+          <a hre="contact">Contact</a>
         </li>
       </ul>
     </div>

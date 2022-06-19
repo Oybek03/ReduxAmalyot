@@ -6,18 +6,13 @@ import Counter from "./Counter";
 import About from "./About";
 import Header from "./Header";
 import Contact from "./Contact";
+import { CounterConnect } from "../redux/connect/CounterConnect";
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Counter />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+      <CounterConnect />
     </div>
   );
 };

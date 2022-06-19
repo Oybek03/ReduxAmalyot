@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { qush, ayir, nol } from "../redux/redux";
 
-const Counter = () => {
-  const dispatch = useDispatch();
-
-  const data = useSelector((val) => val);
+const Counter = (props) => {
+  console.log(props.count);
 
   const increment = () => {
-    dispatch(ayir());
+    props.ayir(1);
   };
-  const decrement = () => {
-    dispatch(qush());
-  };
-  const reset = () => {
-    dispatch(nol());
-  };
+  const decrement = () => {};
+  const reset = () => {};
 
   return (
     <div>
-      <h1>{data}</h1>
+      <h1>0</h1>
       <button
         className="btn btn-info"
         onClick={() => {
